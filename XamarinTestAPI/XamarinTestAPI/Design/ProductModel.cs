@@ -17,7 +17,7 @@ namespace XamarinTestAPI.Design
                     name="",
                     description="",
                     short_description="",
-                    
+                    images=[]
                 };
             }
         }
