@@ -6,7 +6,7 @@ namespace XamarinTestAPI.API
 {
     class ApiKey
     {
-        private readonly string cKey = "yessdsadss"; //get the API key from WordPress
+        private readonly string cKey = "yessdsadsadsdss"; //get the API key from WordPress
         private readonly string cSec = "yes"; //get the API key from WordPress
 
         public string CKey
