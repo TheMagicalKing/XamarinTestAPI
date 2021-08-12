@@ -9,7 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-*/XamarinTestAPI/XamarinTestApi/API/ApiKey.cs
+**/XamarinTestAPI/XamarinTestApi/API/ApiKey.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
