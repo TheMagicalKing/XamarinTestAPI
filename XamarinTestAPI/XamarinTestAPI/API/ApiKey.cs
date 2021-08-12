@@ -9,7 +9,7 @@ namespace XamarinTestAPI.API
         private readonly string cKey = "yesss"; //get the API key from WordPress
         private readonly string cSec = "yes"; //get the API key from WordPress
 
-       public string CKey
+        public string CKey
         {
             get
             {
