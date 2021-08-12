@@ -4,12 +4,17 @@ using System.Text;
 
 namespace XamarinTestAPI.Services
 {
+    
     public class Product
     {
-        public List<object> breeds { get; set; }
-        public string id { get; set; }
-        public string url { get; set; }
-        public int width { get; set; }
-        public int height { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string slug { get; set; }
+        public string permalink { get; set; }
+        public string description { get; set; }
+        public string short_description { get; set; }
+        public string src { get; set; }
+
     }
+    
 }

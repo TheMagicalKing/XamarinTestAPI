@@ -8,16 +8,17 @@
         <StackLayout Orientation="Vertical" Padding="10,20">
             <StackLayout Orientation="Horizontal">
                 <Label Text="Name:"></Label>
-                <Label Text="{Binding Path=idame}"></Label>
+                <Label Text="{Binding Path=name}"></Label>
             </StackLayout>
 
             <StackLayout Orientation="Vertical">
                 <Label Text="Description:"></Label>
-                <Label Text="{Binding width}"></Label>
-            </StackLayout>
-
-            <Image Source="{Binding Path=url}" Aspect="AspectFit" HorizontalOptions="FillAndExpand"
+                <Label Text="{Binding description}"></Label>
+                <Image Source="" Aspect="AspectFit" HorizontalOptions="FillAndExpand"
                    VerticalOptions="Start"></Image>
+            </StackLayout>
+            
+            
             <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start">
                 <Button Text="Order" x:Name="orderBtn"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.25}"

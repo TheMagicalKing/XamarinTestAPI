@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinTestAPI.MainPage">
+             x:Class="XamarinTestAPI.MainPage"
+             xmlns:design="clr-namespace:XamarinTestAPI.Design;assembly:XamarinTestAPI">
+
 
     <CollectionView ItemsSource="{Binding}" SelectionMode="Single" SelectionChanged="Item_Selected">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <StackLayout Orientation="Vertical">
-                <Label Text="{Binding Path=id}" FontSize="Large"></Label>
-                <Label Text="{Binding Path=Description}" FontSize="Small"></Label>
-            </StackLayout>
+                    <Image Source="{Binding src}" BindingContext="{x:Static design:ImageModel.Image}"></Image>
+                    <Label Text="{Binding Path=name}" FontSize="Large"></Label>
+                    <Label Text="{Binding Path=short_description}" FontSize="Small"></Label>
+                </StackLayout>
         </DataTemplate>
     </CollectionView.ItemTemplate>
     </CollectionView>

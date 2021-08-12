@@ -29,6 +29,7 @@ namespace XamarinTestAPI
         {
             base.OnAppearing();
             var products = await ProductService.GetProductsAsync();
+            var images = await ImageService.GetImageAsync();
             BindingContext = products;
         }
     }
