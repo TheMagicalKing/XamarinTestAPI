@@ -37,34 +37,24 @@ namespace XamarinTestAPI.Services
         public static async Task<List<Product>> GetProductsAsync()
         {
             ApiKey keysGet = new ApiKey();
+            
+            
             var productsRawHtml = await client.GetStringAsync("products?consumer_key="+keysGet.CKey+"&consumer_secret="+keysGet.CSec);
             var productsRaw = Regex.Replace(productsRawHtml, "<.*?>", String.Empty);
             var serializer = new JsonSerializer();
             using (var tReader = new StringReader(productsRaw))
             {
+
                 using (var jReader = new JsonTextReader(tReader))
                 {
                     var products = serializer.Deserialize<List<Product>>(
                         jReader);
                     return products;
+                   
                 }
             }
         }
-        /*public static async Task<List<Image>> GetImagesAsync()
-        {
-            var imagesRawHtml = await client.GetStringAsync("products?consumer_key=" + cKey + "&consumer_secret=" + cSec);
-            var imagesRaw = Regex.Replace(imagesRawHtml, "<.*?>", String.Empty);
-            var serializer = new JsonSerializer();
-            using (var tReader = new StringReader(imagesRaw))
-            {
-                using (var jReader = new JsonTextReader(tReader))
-                {
-                    var products = serializer.Deserialize<List<Product>>(
-                        jReader);
-                    return images;
-                }
-            }
-        }*/
+        
 
 
         public static async Task SaveWishList()

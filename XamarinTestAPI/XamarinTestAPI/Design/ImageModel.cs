@@ -13,7 +13,8 @@ namespace XamarinTestAPI.Design
             {
                 return new Image
                 {
-                    src = ""
+                    name = "",
+                    src = "",
                 };
             }
         }

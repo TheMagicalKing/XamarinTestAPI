@@ -9,7 +9,7 @@
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <StackLayout Orientation="Vertical">
-                    <Image Source="{Binding src}" BindingContext="{x:Static design:ImageModel.Image}"></Image>
+                    <Image Source="{Binding images}" ></Image>
                     <Label Text="{Binding Path=name}" FontSize="Large"></Label>
                     <Label Text="{Binding Path=short_description}" FontSize="Small"></Label>
                 </StackLayout>
